@@ -1,0 +1,47 @@
+package com.lti.training_assignment;
+import java.util.Scanner;
+
+public class App2 {
+
+	           private static Scanner sc;
+
+			public static void main(String[] args) {
+				ChiefDao dao=new  ChiefDao();
+				
+				Chief c=new Chief();
+				//for(int i=1;i<=10;i++){
+				Scanner sc = new Scanner(System.in);
+				System.out.println("Enter details");
+				int id = Integer.parseInt(sc.nextLine());
+				String cname=sc.nextLine();
+				String qual=sc.nextLine();
+				String state = sc.nextLine();
+				String date = sc.nextLine();
+				String party = sc.nextLine();
+				
+				c.setCid(id);
+				c.setCname(cname);
+				c.setQualification(qual);
+				c.setState(state);
+				c.setEnddate(date);
+				c.setParty(party);
+			    dao.add(c);
+			
+			//}
+			
+			List<Chief> chief=dao.fetchAll();
+			for(Chief c:chief) {
+				System.out.println("id "+ c.getId());
+				System.out.println("name "+c.getCname());
+				System.out.println("quakl "+c.getQualification());
+				System.out.println("state"+c.getState());
+				System.out.println("enddate"+c.getEnddate());
+				System.out.println("parthy"+c.getParty());
+				
+				
+		
+			
+
+	}
+
+}

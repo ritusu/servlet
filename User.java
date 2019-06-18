@@ -4,11 +4,11 @@ public class User {
 
 	private String username;
 	private String password;
-	private boolean active;
+	private String active;
 	
 	public User() {
 	}
-	public User(String username, String password, boolean active) {
+	public User(String username, String password, String active) {
 		this.username = username;
 		this.password = password;
 		this.active = active;
@@ -26,10 +26,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isActive() {
+	public String getActive() {
 		return active;
 	}
-	public void setActive(boolean active) {
+	public void setActive(String active) {
 		this.active = active;
 	}
 	
